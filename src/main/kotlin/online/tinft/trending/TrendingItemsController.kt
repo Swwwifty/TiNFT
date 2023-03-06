@@ -23,7 +23,7 @@ suspend fun getTrendingItems(httpClient: HttpClient): List<TrendingItem> {
 
 private suspend fun getTrendingCollectionsME(httpClient: HttpClient): List<TrendingCollectionME> {
     val items = httpClient.get(
-        "https://stats-mainnet.magiceden.io/collection_stats/popular_collections/sol?window=1d&limit=5",
+        "https://stats-mainnet.magiceden.io/collection_stats/popular_collections/sol?window=1d&limit=1",
     )
     return items.body()
 }
