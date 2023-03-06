@@ -23,3 +23,16 @@ data class TrendingItem(
     val price: Double?,
     val likesCount: Int,
 )
+
+@Serializable
+data class TrendingItemResultCoralCubeResult(
+    val items: List<TrendingItemResultCoralCubeItem>
+)
+
+@Serializable
+data class TrendingItemResultCoralCubeItem(
+    val name: String,
+    val mint: String,
+    val image: String?,
+    val price: Double?
+)
