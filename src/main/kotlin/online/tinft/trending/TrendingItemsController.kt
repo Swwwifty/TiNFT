@@ -18,7 +18,7 @@ suspend fun getTrendingItems(httpClient: HttpClient): List<TrendingItem> {
                 likesCount = (10..100).random(),
             )
         }
-        .sortedBy { it.likesCount }
+        .sortedByDescending { it.likesCount }
 }
 
 private suspend fun getTrendingCollectionsME(httpClient: HttpClient): List<TrendingCollectionME> {

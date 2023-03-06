@@ -13,7 +13,7 @@ suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollect
             floorPrice = it.fp,
             likesCount = (it.vol?.div(100))?.toInt() ?: 0,
         )
-    }.sortedBy { it.likesCount }
+    }.sortedByDescending { it.likesCount }
 }
 
 private suspend fun getTrendingCollectionsME(httpClient: HttpClient): List<TrendingCollectionME> {
