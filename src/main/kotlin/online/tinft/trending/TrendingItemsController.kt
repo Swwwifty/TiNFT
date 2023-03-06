@@ -30,7 +30,7 @@ private suspend fun getTrendingCollectionsME(httpClient: HttpClient): List<Trend
 
 private suspend fun getTrendingItemsByCollectionME(httpClient: HttpClient, collectionId: String): TrendingItemResultME {
     val items = httpClient.get(
-        "https://api-mainnet.magiceden.io/rpc/getListedNFTsByQueryLite?q={\"\$match%22:{\"collectionSymbol\":\"$collectionId\"}}",
+        "https://api-mainnet.magiceden.io/idxv2/getListedNftsByCollectionSymbol?collectionSymbol=$collectionId&direction=2&field=1&limit=6&offset=0&mode=all",
     )
     return items.body()
 }
