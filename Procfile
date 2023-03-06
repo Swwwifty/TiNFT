@@ -1,1 +1,1 @@
-web: ./build/install/TiNFT/bin/TiNFT
+web: ./build/install/TiNFT/bin/tinft

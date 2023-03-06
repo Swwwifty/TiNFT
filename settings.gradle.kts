@@ -1,1 +1,1 @@
-rootProject.name = "online.tinft.tinft"
+rootProject.name = "tinft"
