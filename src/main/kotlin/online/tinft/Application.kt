@@ -13,7 +13,7 @@ import online.tinft.plugins.configureRouting
 import online.tinft.plugins.configureSerialization
 
 fun main() {
-    embeddedServer(Netty, port = 8080, module = Application::module)
+    embeddedServer(Netty, port = System.getenv("PORT").toInt(), module = Application::module)
         .start(wait = true)
 }
 
