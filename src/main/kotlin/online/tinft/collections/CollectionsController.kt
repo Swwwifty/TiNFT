@@ -22,8 +22,8 @@ suspend fun getCollections(httpClient: HttpClient): List<CollectionResponse> {
             id = it.collectionSymbol,
             name = it.name,
             image = it.image,
-            totalVolume = it.totalVol,
-            volume1d = it.vol,
+            totalVolume = it.totalVol?.let { price -> floor(price / 100) * 100 },
+            volume1d = it.vol?.let { price -> floor(price / 100) * 100 },
             floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE / 100) * 100 },
         )
     }.also {
