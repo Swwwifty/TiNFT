@@ -7,6 +7,7 @@ import io.ktor.server.plugins.autohead.AutoHeadResponse
 import io.ktor.server.resources.Resources
 import io.ktor.server.routing.routing
 import online.tinft.collections.collectionsRouting
+import online.tinft.items.itemsRouting
 import online.tinft.trending.trendingRouting
 
 fun Application.configureRouting(httpClient: HttpClient) {
@@ -15,5 +16,6 @@ fun Application.configureRouting(httpClient: HttpClient) {
     routing {
         collectionsRouting(httpClient)
         trendingRouting(httpClient)
+        itemsRouting(httpClient)
     }
 }
