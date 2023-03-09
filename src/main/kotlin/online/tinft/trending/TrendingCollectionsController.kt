@@ -3,8 +3,17 @@ package online.tinft.trending
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import java.util.Calendar
+
+private val cache = mutableListOf<TrendingCollection>()
+private var cacheTime: Long = 0
 
 suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollection> {
+    val curTime = Calendar.getInstance().time.time
+    if (curTime - cacheTime < 30 * 60 * 1000) {
+        return cache
+    }
+    cacheTime = curTime
     return getTrendingCollectionsME(httpClient).map {
         TrendingCollection(
             id = it.collectionSymbol,
@@ -13,7 +22,12 @@ suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollect
             floorPrice = it.fp,
             likesCount = (it.vol?.div(100))?.toInt() ?: 0,
         )
-    }.sortedByDescending { it.likesCount }
+    }
+        .sortedByDescending { it.likesCount }
+        .also {
+            cache.clear()
+            cache.addAll(it)
+        }
 }
 
 private suspend fun getTrendingCollectionsME(httpClient: HttpClient): List<TrendingCollectionME> {

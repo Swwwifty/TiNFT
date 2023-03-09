@@ -3,22 +3,37 @@ package online.tinft.trending
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import java.text.DecimalFormat
+import java.util.Calendar
+
+private val itemsCache = mutableListOf<TrendingItem>()
+private var cacheTime: Long = 0
+private val df = DecimalFormat("#.##")
 
 suspend fun getTrendingItems(httpClient: HttpClient): List<TrendingItem> {
+    val curTime = Calendar.getInstance().time.time
+    if (curTime - cacheTime < 30 * 60 * 1000) {
+        return itemsCache
+    }
+    cacheTime = curTime
     return getTrendingCollectionsME(httpClient)
         .flatMap {
-            getTrendingItemsByCollectionME(httpClient, it.collectionSymbol).results
+            getTrendingItemsByCollectionCoralCube(httpClient, it.collectionSymbol).items
         }
         .map {
             TrendingItem(
-                id = it.mintAddress,
-                name = it.title,
-                image = it.img,
-                price = it.price?.times(0.000000001),
+                id = it.mint,
+                name = it.name,
+                image = it.image,
+                price = it.price?.times(0.000000001)?.let { price -> df.format(price).toDouble() },
                 likesCount = (10..100).random(),
             )
         }
         .sortedByDescending { it.likesCount }
+        .also {
+            itemsCache.clear()
+            itemsCache.addAll(it)
+        }
 }
 
 private suspend fun getTrendingCollectionsME(httpClient: HttpClient): List<TrendingCollectionME> {
