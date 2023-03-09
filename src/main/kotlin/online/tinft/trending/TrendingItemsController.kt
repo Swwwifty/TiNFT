@@ -7,13 +7,13 @@ import io.ktor.client.request.get
 suspend fun getTrendingItems(httpClient: HttpClient): List<TrendingItem> {
     return getTrendingCollectionsME(httpClient)
         .flatMap {
-            getTrendingItemsByCollectionCoralCube(httpClient, it.collectionSymbol).items
+            getTrendingItemsByCollectionME(httpClient, it.collectionSymbol).results
         }
         .map {
             TrendingItem(
-                id = it.mint,
-                name = it.name,
-                image = it.image,
+                id = it.mintAddress,
+                name = it.title,
+                image = it.img,
                 price = it.price?.times(0.000000001),
                 likesCount = (10..100).random(),
             )
