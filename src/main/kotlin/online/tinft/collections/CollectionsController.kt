@@ -4,9 +4,11 @@ import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
 import java.util.Calendar
+import kotlin.math.floor
 
 private val cache = mutableListOf<CollectionResponse>()
 private var cacheTime: Long = 0
+private const val CURRENCY_RATE = 1_000_000_000
 
 suspend fun getCollections(httpClient: HttpClient): List<CollectionResponse> {
     val curTime = Calendar.getInstance().time.time
@@ -22,7 +24,7 @@ suspend fun getCollections(httpClient: HttpClient): List<CollectionResponse> {
             image = it.image,
             totalVolume = it.totalVol,
             volume1d = it.vol,
-            floorPrice = it.fp,
+            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE) / 100 * 100 },
         )
     }.also {
         cache.addAll(it)
