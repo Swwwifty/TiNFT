@@ -3,19 +3,19 @@ package online.tinft.trending
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
-import java.text.DecimalFormat
 import java.util.Calendar
+import kotlin.math.floor
 
 private val itemsCache = mutableListOf<TrendingItem>()
 private var cacheTime: Long = 0
-private val df = DecimalFormat("#.##")
 
 suspend fun getTrendingItems(httpClient: HttpClient): List<TrendingItem> {
     val curTime = Calendar.getInstance().time.time
-    if (curTime - cacheTime < 30 * 60 * 1000) {
+    if (itemsCache.isNotEmpty() && curTime - cacheTime < 30 * 60 * 1000) {
         return itemsCache
     }
     cacheTime = curTime
+    itemsCache.clear()
     return getTrendingCollectionsME(httpClient)
         .flatMap {
             getTrendingItemsByCollectionCoralCube(httpClient, it.collectionSymbol).items
@@ -25,13 +25,12 @@ suspend fun getTrendingItems(httpClient: HttpClient): List<TrendingItem> {
                 id = it.mint,
                 name = it.name,
                 image = it.image,
-                price = it.price?.times(0.000000001)?.let { price -> df.format(price).toDouble() },
+                price = it.price?.times(0.000000001)?.let { price -> floor(price * 100) / 100 },
                 likesCount = (10..100).random(),
             )
         }
         .sortedByDescending { it.likesCount }
         .also {
-            itemsCache.clear()
             itemsCache.addAll(it)
         }
 }

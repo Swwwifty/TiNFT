@@ -10,10 +10,11 @@ private var cacheTime: Long = 0
 
 suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollection> {
     val curTime = Calendar.getInstance().time.time
-    if (curTime - cacheTime < 30 * 60 * 1000) {
+    if (cache.isNotEmpty() && curTime - cacheTime < 30 * 60 * 1000) {
         return cache
     }
     cacheTime = curTime
+    cache.clear()
     return getTrendingCollectionsME(httpClient).map {
         TrendingCollection(
             id = it.collectionSymbol,
@@ -25,7 +26,6 @@ suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollect
     }
         .sortedByDescending { it.likesCount }
         .also {
-            cache.clear()
             cache.addAll(it)
         }
 }
