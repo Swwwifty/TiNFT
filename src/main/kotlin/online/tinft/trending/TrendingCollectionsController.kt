@@ -3,12 +3,11 @@ package online.tinft.trending
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import online.tinft.common.format2DigitsLamport
 import java.util.Calendar
-import kotlin.math.floor
 
 private val cache = mutableListOf<TrendingCollection>()
 private var cacheTime: Long = 0
-private const val CURRENCY_RATE = 1_000_000_000
 
 suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollection> {
     val curTime = Calendar.getInstance().time.time
@@ -22,7 +21,7 @@ suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollect
             id = it.collectionSymbol,
             name = it.name,
             image = it.image,
-            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE / 100) * 100 },
+            floorPrice = it.fp?.format2DigitsLamport(),
             likesCount = (it.vol?.div(100))?.toInt() ?: 0,
         )
     }

@@ -3,12 +3,12 @@ package online.tinft.collections
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.request.get
+import online.tinft.common.format2Digits
+import online.tinft.common.format2DigitsLamport
 import java.util.Calendar
-import kotlin.math.floor
 
 private val cache = mutableListOf<CollectionResponse>()
 private var cacheTime: Long = 0
-private const val CURRENCY_RATE = 1_000_000_000
 
 suspend fun getCollections(httpClient: HttpClient): List<CollectionResponse> {
     val curTime = Calendar.getInstance().time.time
@@ -22,9 +22,9 @@ suspend fun getCollections(httpClient: HttpClient): List<CollectionResponse> {
             id = it.collectionSymbol,
             name = it.name,
             image = it.image,
-            totalVolume = it.totalVol?.let { price -> floor(price / 100) * 100 },
-            volume1d = it.vol?.let { price -> floor(price / 100) * 100 },
-            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE / 100) * 100 },
+            totalVolume = it.totalVol?.format2Digits(),
+            volume1d = it.vol?.format2Digits(),
+            floorPrice = it.fp?.format2DigitsLamport(),
         )
     }.also {
         cache.addAll(it)
