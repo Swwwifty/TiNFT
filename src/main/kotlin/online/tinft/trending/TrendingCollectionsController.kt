@@ -22,7 +22,7 @@ suspend fun getTrendingCollections(httpClient: HttpClient): List<TrendingCollect
             id = it.collectionSymbol,
             name = it.name,
             image = it.image,
-            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE) / 100 * 100 },
+            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE / 100) * 100 },
             likesCount = (it.vol?.div(100))?.toInt() ?: 0,
         )
     }

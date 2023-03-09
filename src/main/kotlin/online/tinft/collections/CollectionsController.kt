@@ -24,7 +24,7 @@ suspend fun getCollections(httpClient: HttpClient): List<CollectionResponse> {
             image = it.image,
             totalVolume = it.totalVol,
             volume1d = it.vol,
-            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE) / 100 * 100 },
+            floorPrice = it.fp?.let { price -> floor(price / CURRENCY_RATE / 100) * 100 },
         )
     }.also {
         cache.addAll(it)
