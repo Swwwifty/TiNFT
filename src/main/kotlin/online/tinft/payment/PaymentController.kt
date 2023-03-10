@@ -12,7 +12,7 @@ suspend fun buyItem(
     tokenMint: String,
     tokenAta: String,
     price: String,
-): Instruction {
+): String {
     return httpClient.get(
         "https://api-mainnet.magiceden.dev/v2/instructions/buy_now",
     ) {
