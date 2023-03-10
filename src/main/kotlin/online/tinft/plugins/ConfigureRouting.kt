@@ -8,6 +8,7 @@ import io.ktor.server.resources.Resources
 import io.ktor.server.routing.routing
 import online.tinft.collections.collectionsRouting
 import online.tinft.items.itemsRouting
+import online.tinft.payment.paymentRouting
 import online.tinft.trending.trendingRouting
 
 fun Application.configureRouting(httpClient: HttpClient) {
@@ -17,5 +18,6 @@ fun Application.configureRouting(httpClient: HttpClient) {
         collectionsRouting(httpClient)
         trendingRouting(httpClient)
         itemsRouting(httpClient)
+        paymentRouting(httpClient)
     }
 }

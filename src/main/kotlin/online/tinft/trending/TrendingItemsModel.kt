@@ -11,8 +11,8 @@ data class TrendingItemResultME(
 data class TrendingItemME(
     val mintAddress: String,
     val title: String,
-    val img: String?,
-    val price: Double?,
+    val img: String? = null,
+    val price: Double? = null,
 )
 
 @Serializable
@@ -26,13 +26,13 @@ data class TrendingItem(
 
 @Serializable
 data class TrendingItemResultCoralCubeResult(
-    val items: List<TrendingItemResultCoralCubeItem>
+    val items: List<TrendingItemResultCoralCubeItem>,
 )
 
 @Serializable
 data class TrendingItemResultCoralCubeItem(
     val name: String,
     val mint: String,
-    val image: String?,
-    val price: Double?
+    val image: String? = null,
+    val price: Double? = null,
 )

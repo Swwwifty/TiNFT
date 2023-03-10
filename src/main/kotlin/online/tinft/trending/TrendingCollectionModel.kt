@@ -6,9 +6,9 @@ import kotlinx.serialization.Serializable
 data class TrendingCollectionME(
     val collectionSymbol: String,
     val name: String,
-    val image: String?,
-    val fp: Double?,
-    val vol: Double?,
+    val image: String? = null,
+    val fp: Double? = null,
+    val vol: Double? = null,
 )
 
 @Serializable

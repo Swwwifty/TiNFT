@@ -6,10 +6,10 @@ import kotlinx.serialization.Serializable
 data class CollectionME(
     val collectionSymbol: String,
     val name: String,
-    val image: String?,
-    val totalVol: Double?,
-    val vol: Double?,
-    val fp: Double?,
+    val image: String? = null,
+    val totalVol: Double? = null,
+    val vol: Double? = null,
+    val fp: Double? = null,
 )
 
 @Serializable

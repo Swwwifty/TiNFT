@@ -11,8 +11,8 @@ data class ItemResultME(
 data class ItemME(
     val mintAddress: String,
     val title: String,
-    val img: String?,
-    val price: Double?,
+    val img: String? = null,
+    val price: Double? = null,
 )
 
 @Serializable
