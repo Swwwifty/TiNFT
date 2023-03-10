@@ -21,7 +21,7 @@ suspend fun buyItem(
             parameters.append("seller", seller)
             parameters.append("auctionHouseAddress", auctionHouseAddress)
             parameters.append("tokenMint", tokenMint)
-            parameters.append("tokenAta", tokenAta)
+            parameters.append("tokenATA", tokenAta)
             parameters.append("price", price)
             parameters.append("sellerExpiry", "-1")
             parameters.append("buyerCreatorRoyaltyPercent", "0")

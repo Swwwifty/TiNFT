@@ -14,7 +14,7 @@ fun Route.paymentRouting(httpClient: HttpClient) {
             val seller = call.request.queryParameters["seller"]!!
             val auctionHouseAddress = call.request.queryParameters["auctionHouseAddress"]!!
             val tokenMint = call.request.queryParameters["tokenMint"]!!
-            val tokenAta = call.request.queryParameters["tokenAta"]!!
+            val tokenAta = call.request.queryParameters["tokenATA"]!!
             val price = call.request.queryParameters["price"]!!
             call.respond(
                 buyItem(
