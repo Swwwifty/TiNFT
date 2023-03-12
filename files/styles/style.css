@@ -10439,6 +10439,11 @@ img {
     -webkit-box-shadow: none;
     box-shadow: none; }
 
+@media screen and (min-width: 991.1px) {
+  .header {
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px); } }
+
 .navigation .nav-link {
   padding-right: 30px;
   padding-left: 30px; }
@@ -10923,9 +10928,11 @@ img {
     margin-right: 12px; }
 
 @media screen and (max-width: 991px) {
-  .contact:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 12px; } }
+  .contact--item {
+    width: 100%; }
+    .contact--item:not(:last-child) {
+      margin-right: 0;
+      margin-bottom: 12px; } }
 
 .contact--img {
   display: inline-block;
