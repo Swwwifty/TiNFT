@@ -1,304 +1,360 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <title>tiNFT</title>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <link rel="icon" type="image/x-icon" sizes="16x16" href="img/favicon.ico" />
-    <link rel="stylesheet" type="text/css" href="fonts/fontello/css/fontello.css" />
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  </head>
-  <body>
-    <header class="header navbar fixed-top navbar-expand-lg">
-        <nav class=" container-xl">
-          <button
-          class="header--burger navbar-toggler"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-          
-        <div
-          class="offcanvas offcanvas-end"
-          tabindex="-1"
-          id="offcanvasNavbar"
-          aria-labelledby="offcanvasNavbarLabel"
-        >
-          <div class="offcanvas-header">
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav navigation">
-              <li class="nav-item">
-                <a class="nav-link active" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#goals">Goals</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#features">Features</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#tistore">tiStore</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#roadmap">Roadmap</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#wl">Wait List</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#team">Team</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#contact">Join Us</a>
-              </li>
-            </ul>
-          </div>
+
+<head>
+  <title>tiNFT</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:title" content="tiNFT" />
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="img/favicon.ico" />
+  <link rel="apple-touch-icon" href="img/logo-phantom.png" />
+  <link rel="stylesheet" type="text/css" href="fonts/fontello/css/fontello.css" />
+  <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  <header class="header navbar fixed-top navbar-expand-lg">
+    <nav class=" container-xl">
+      <button class="header--burger navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-     
-    </nav>      
-    </header>
-    <main>
-      <section class="banner section">
-        <div class="container-xl banner--content">
-          <div class="banner--col" data-aos="zoom-in">
-            <h1 class="visually-hidden">tiNFT</h1>
-            <img class="banner--logo" src="img/logo.png" alt="logo">
-            <p class="banner--desc">
-              tiNFT is A mobile app that allows users to explore Сollections,
-              NFTs, and Wallets in a New Way.
-            </p>
-          </div>
-          <div class="banner--col _img" data-aos="zoom-in"
-          data-aos-duration="500">
-            <div class="banner--img-wrapper">
-              <img
-              class="banner--img"
-              src="img/banner.png"
-              alt="phone image"
-            />
-            <img
-              class="banner--img"
-              src="img/swipes.png"
-              alt="phone image"
-            />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="tagline section">
-        <div class="container-xl">
-          <h2 class="tagline--title" data-aos="fade-up">
-            &#171 Use Swipe Right if you like NFT and left if not &#187
-          </h2>
-        </div>
-      </section>
-      <section class="goals section" id="goals">
-        <div class="container-xl goals--container">
-          <h2 class="goals--title subtitle" data-aos="fade-up">Goals</h2>
-            <ul class="goals--list">
-              <li class="goals--item _speculation" data-aos="fade-up">
-                <p>Solve the Problem of Volume speculation</p>
-              </li>
-              <li class="goals--item _search" data-aos="fade-up">
-                <p>Improve the user experience of project search</p>
-              </li>
-              <li class="goals--item _new-authors" data-aos="fade-up">
-                <p>Allow new authors and projects to be noticed</p>
-              </li>
-              <li class="goals--item _new-users" data-aos="fade-up">
-                <p>Bring more authors, projects, and users to the Solana blockchain</p>
-              </li>
-              <li class="goals--item _onboard" data-aos="fade-up">
-                <p>Onboard web2 users to web3</p>
-              </li>
-              <li class="goals--item _connect-community" data-aos="fade-up">
-                <p>Connect users with their future community</p>
-              </li>
-              <li class="goals--item _connect-together" data-aos="fade-up">
-                <p>Connect users together</p>
-              </li>
-            </ul>
-        </div>
-      </section>
-      <section class="features section" id="features">
-        <div class="container-xl features--container">
-          <h2 class="features--title subtitle">Features</h2>
-          <ul class="features--list">
-            <li class="features--item" data-aos="fade-up">
-              <img class="features--img" src="img/swipes.png" alt="swipes">
-              <p class="features--item-title">Swipes</p>
-              <p class="features--desc">that influence the ecosystem</p>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav navigation">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
             </li>
-            <li class="features--item" data-aos="fade-up">
-              <img class="features--img" src="img/trending.png" alt="trending">
-              <p class="features--item-title">Trending</p>
-              <p class="features--desc">based on TiUsers choice</p>
+            <li class="nav-item">
+              <a class="nav-link" href="#goals">Goals</a>
             </li>
-            <li class="features--item" data-aos="fade-up">
-              <img class="features--img" src="img/rewards.png" alt="trending">
-              <p class="features--item-title">Rewards</p>
-              <p class="features--desc">for active TiUsers</p>
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
             </li>
-            <li class="features--item" data-aos="fade-up">
-              <img class="features--img" src="img/tistore.png" alt="swipes">
-              <p class="features--item-title">tiStore</p>
-              <p class="features--desc">to spent tiTokens</p>
+            <li class="nav-item">
+              <a class="nav-link" href="#tistore">tiStore</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#roadmap">Roadmap</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#wl">Wait List</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#team">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Join Us</a>
             </li>
           </ul>
         </div>
-      </section>
-      <section class="rewards section" id="tistore">
-        <div class="rewards--container container-xl">
-          <div class="rewards--content" data-aos="flip-left">
-            <h2 class="rewards--title subtitle">Rewards & tiStore</h2>
-            <p class="rewards--desc">Receive tiTokens for activity and swipes!</p>
-            <p class="rewards--desc">Buy items in the tiStore!</p>
-            <p class="rewards--desc">Mint NFT directly in the tinft!</p>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="banner section">
+      <div class="container-xl banner--content">
+        <div class="banner--col" data-aos="zoom-in">
+          <h1 class="visually-hidden">tiNFT</h1>
+          <img class="banner--logo" src="img/logo.png" alt="logo">
+          <p class="banner--desc">
+            tiNFT is A mobile app that allows users to explore Сollections,
+            NFTs, and Wallets in a New Way.
+          </p>
+        </div>
+        <div class="banner--col _img" data-aos="zoom-in" data-aos-duration="500">
+          <div class="banner--img-wrapper">
+            <img class="banner--img" src="img/banner.png" alt="phone image" />
+            <img class="banner--img" src="img/swipes.png" alt="phone image" />
           </div>
         </div>
-      </section>
-      <section class="roadmap section" id="roadmap">
-        <div class="container-xl">
-          <h2 class="roadmap--title subtitle" data-aos="fade-up">Roadmap</h2>
-          <div class="roadmap--content">
-            <article class="roadmap--col" data-aos="fade-up">
-              <h2 class="roadmap--subtitle">Q2</h2>
-              <ul class="roadmap--list">
-                <li class="roadmap--item">Backend with AI models</li>
-                <li class="roadmap--item">tiUser: swipe across users</li>
-                <li class="roadmap--item">Create NFT features</li>
-                <li class="roadmap--item">tiStore</li>
-                <li class="roadmap--item">Start of the iOS development</li>
-                <li class="roadmap--item">Launch of GEN0 NFT collection</li>
-              </ul>
-            </article>
-            <article class="roadmap--col" data-aos="fade-up" data-aos-delay="50">
-              <h2 class="roadmap--subtitle">Q3</h2>
-              <ul class="roadmap--list">
-                <li class="roadmap--item">Chat features</li>
-                <li class="roadmap--item">Launch of tiToken</li>
-                <li class="roadmap--item">tiMints: explore across future mints</li>
-                <li class="roadmap--item">Subscriptions</li>
-                <li class="roadmap--item">Advertisments</li>
-                <li class="roadmap--item">Launch of GEN1 collection</li>
-              </ul>
-            </article>
-            <article class="roadmap--col" data-aos="fade-up" data-aos-delay="100">
-              <h2 class="roadmap--subtitle">Q4</h2>
-              <ul class="roadmap--list">
-                <li class="roadmap--item">tiCoins: swipe & explore across tokens </li>
-                <li class="roadmap--item">DeFi features inside the app</li>
-                <li class="roadmap--item">Expansion to other blockchains</li>
-              </ul>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="wl section" id="wl">
-        <div class="container-xl">
-          <h2 data-aos="zoom-in">
-            <a class="wl--link" href="https://t.co/kt8f7L7ILH" target="_blank">Join WaitList!</a>
-          </h2>
-        </div>
-      </section>
-      <section class="team section" id="team">
-        <div class="container-xl">
-          <h2 class="subtitle team--title" data-aos="fade-up">Team</h2>
-          <ul class="team--list">
-            <li class="team--item" data-aos="fade-up">
-              <img class="team--img" src="img/ul-team.jpg" alt="team member">
-              <div class="team--info-wrapper">
-                <div>
-                  <p class="team--name">nicolass</p>
-                  <p>Co-Founder</p>
-                  <p>Mobile, Community</p>
-                  <p>8 years of dev experience</p>
+      </div>
+    </section>
+
+    <section class="tagline section">
+      <div class="container-xl">
+        <h2 class="tagline--title" data-aos="fade-up">
+          &#171 Use Swipe Right if you like NFT and left if not &#187
+        </h2>
+      </div>
+    </section>
+    <section class="goals section" id="goals">
+      <div class="container-xl goals--container">
+        <h2 class="goals--title subtitle" data-aos="fade-up">Goals</h2>
+        <ul class="goals--list">
+          <li class="goals--item _speculation" data-aos="fade-up">
+            <p>Solve the Problem of Volume speculation</p>
+          </li>
+          <li class="goals--item _search" data-aos="fade-up">
+            <p>Improve the user experience of project search</p>
+          </li>
+          <li class="goals--item _new-authors" data-aos="fade-up">
+            <p>Allow new authors and projects to be noticed</p>
+          </li>
+          <li class="goals--item _new-users" data-aos="fade-up">
+            <p>Bring more authors, projects, and users to the Solana blockchain</p>
+          </li>
+          <li class="goals--item _onboard" data-aos="fade-up">
+            <p>Onboard web2 users to web3</p>
+          </li>
+          <li class="goals--item _connect-community" data-aos="fade-up">
+            <p>Connect users with their future community</p>
+          </li>
+          <li class="goals--item _connect-together" data-aos="fade-up">
+            <p>Connect users together</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="features section" id="features">
+      <div class="container-xl features--container">
+        <h2 class="features--title subtitle">Features</h2>
+        <ul class="features--list">
+          <li class="features--item">
+            <button type="button" class="features--item-btn" data-bs-toggle="modal" data-bs-target="#swipesModal">
+              <img class="features--img" src="img/swipes.png" alt="swipes">
+            </button>
+            <p class="features--item-title">Swipes</p>
+            <p class="features--desc">that influence the ecosystem</p>
+            <div class="modal fade features-modal" id="swipesModal" tabindex="-1" aria-labelledby="swipesModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="btn-close features-modal--btn" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                    <p class="features-modal--title">Swipes</p>
+                    <div class="features-modal--text">
+                      <p>Use Swipe Right if you like NFT and left if not.
+                        Your Swipes have value for the entire ecosystem!</p>
+                      <p> Moreover, we want to introduce swipe-to-earn mechanics.
+                        After choosing whether you like NFT/collection or not you receive tiToken, which can be spent in
+                        tiStore.</p>
+                      <p>By choosing whether you like the Collection, the NFT, or the Wallet, you directly influence
+                        Trending!</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="team--item" data-aos="fade-up">
-              <img class="team--img" src="img/eg-team.jpg" alt="team member">
-              <div class="team--info-wrapper">
-                <div>
-                  <p class="team--name">e.streshnev</p>
-                  <p>Co-Founder</p>
-                  <p>Mobile, Backend</p>
-                  <p>8 years of dev experience</p>
+            </div>
+          </li>
+          <li class="features--item">
+            <button type="button" class="features--item-btn" data-bs-toggle="modal" data-bs-target="#trendingModal">
+              <img class="features--img" src="img/trending.png" alt="trending">
+            </button>
+            <p class="features--item-title">Trending</p>
+            <p class="features--desc">based on tiUsers choice</p>
+            <div class="modal fade features-modal" id="trendingModal" tabindex="-1" aria-labelledby="trendingModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="btn-close features-modal--btn" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                    <p class="features-modal--title">Trending</p>
+                    <div class="features-modal--text">
+                      <p>We present live trending. It is formed based on users' swipes and continuously updated in
+                        real-time.</p>
+                      <p>tinft is the only platform where trending is created by your like or dislike! And it is under
+                        your thumb!</p>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </li>
-            <li class="team--item" data-aos="fade-up">
-              <img class="team--img" src="img/an-team.jpg" alt="team member">
-              <div class="team--info-wrapper">
-                <div>
-                  <p class="team--name">avychev</p>
+            </div>
+          </li>
+          <li class="features--item">
+            <button type="button" class="features--item-btn" data-bs-toggle="modal" data-bs-target="#rewardsModal">
+              <img class="features--img" src="img/rewards.png" alt="rewards">
+            </button>
+            <p class="features--item-title">Rewards</p>
+            <p class="features--desc">for active tiUsers</p>
+            <div class="modal fade features-modal" id="rewardsModal" tabindex="-1" aria-labelledby="rewardsModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="btn-close features-modal--btn" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                    <p class="features-modal--title">Rewards</p>
+                    <div class="features-modal--text">
+                      <p>For activity and swipes you receive tiTokens.</p>
+                      <p>This reward can be spent in the TiStore.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="features--item">
+            <button type="button" class="features--item-btn" data-bs-toggle="modal" data-bs-target="#storeModal">
+              <img class="features--img" src="img/tistore.png" width="200" height="405" alt="tiStore">
+            </button>
+            <p class="features--item-title">tiStore</p>
+            <p class="features--desc">to spent tiTokens</p>
+            <div class="modal fade features-modal" id="storeModal" tabindex="-1" aria-labelledby="storeModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="btn-close features-modal--btn" data-bs-dismiss="modal"
+                      aria-label="Close"></button>
+                    <p class="features-modal--title">tiStore</p>
+                    <div class="features-modal--text">
+                      <p>It's the place where titokens can be spent.</p>
+                      <p>What can be obtained in the Tistore? Whatever users want! Users can mint NFT directly in the
+                        tinft in a couple of clicks and place it for sale inside!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="rewards section" id="tistore">
+      <div class="rewards--container container-xl">
+        <div class="rewards--content" data-aos="flip-left">
+          <h2 class="rewards--title subtitle">Rewards & tiStore</h2>
+          <p class="rewards--desc">Receive tiTokens for activity and swipes!</p>
+          <p class="rewards--desc">Buy items in the tiStore!</p>
+          <p class="rewards--desc">Mint NFT directly in the tinft!</p>
+        </div>
+      </div>
+    </section>
+    <section class="roadmap section" id="roadmap">
+      <div class="container-xl">
+        <h2 class="roadmap--title subtitle" data-aos="fade-up">Roadmap</h2>
+        <div class="roadmap--content">
+          <article class="roadmap--col" data-aos="fade-up">
+            <h2 class="roadmap--subtitle">Q2</h2>
+            <ul class="roadmap--list">
+              <li class="roadmap--item">Backend with AI models</li>
+              <li class="roadmap--item">tiUser: swipe across users</li>
+              <li class="roadmap--item">Create NFT features</li>
+              <li class="roadmap--item">tiStore</li>
+              <li class="roadmap--item">Start of the iOS development</li>
+              <li class="roadmap--item">Launch of GEN0 NFT collection</li>
+            </ul>
+          </article>
+          <article class="roadmap--col" data-aos="fade-up" data-aos-delay="50">
+            <h2 class="roadmap--subtitle">Q3</h2>
+            <ul class="roadmap--list">
+              <li class="roadmap--item">Chat features</li>
+              <li class="roadmap--item">Launch of tiToken</li>
+              <li class="roadmap--item">tiMints: explore across future mints</li>
+              <li class="roadmap--item">Subscriptions</li>
+              <li class="roadmap--item">Advertisments</li>
+              <li class="roadmap--item">Launch of GEN1 collection</li>
+            </ul>
+          </article>
+          <article class="roadmap--col" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="roadmap--subtitle">Q4</h2>
+            <ul class="roadmap--list">
+              <li class="roadmap--item">tiCoins: swipe & explore across tokens </li>
+              <li class="roadmap--item">DeFi features inside the app</li>
+              <li class="roadmap--item">Expansion to other blockchains</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="wl section" id="wl">
+      <div class="container-xl">
+        <h2 data-aos="zoom-in">
+          <a class="wl--link" href="https://t.co/kt8f7L7ILH" target="_blank">Join WaitList!</a>
+        </h2>
+      </div>
+    </section>
+    <section class="team section" id="team">
+      <div class="container-xl">
+        <h2 class="subtitle team--title" data-aos="fade-up">Team</h2>
+        <ul class="team--list">
+          <li class="team--item" data-aos="fade-up">
+            <img class="team--img" src="img/ul-team.jpg" alt="team member">
+            <div class="team--info-wrapper">
+              <div>
+                <p class="team--name">nicolass</p>
+                <p>Co-Founder</p>
+                <p>Mobile, Community</p>
+                <p>8 years of dev experience</p>
+              </div>
+            </div>
+          </li>
+          <li class="team--item" data-aos="fade-up">
+            <img class="team--img" src="img/eg-team.jpg" alt="team member">
+            <div class="team--info-wrapper">
+              <div>
+                <p class="team--name">e.streshnev</p>
+                <p>Co-Founder</p>
+                <p>Mobile, Backend</p>
+                <p>8 years of dev experience</p>
+              </div>
+            </div>
+          </li>
+          <li class="team--item" data-aos="fade-up">
+            <img class="team--img" src="img/an-team.jpg" alt="team member">
+            <div class="team--info-wrapper">
+              <div>
+                <p class="team--name">avychev</p>
                 <p>Co-Founder</p>
                 <p>Mobile</p>
                 <p>8 years of dev experience</p>
-                </div>
               </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <section class="contact section" id="contact">
-        <div class="container-lg">
-          <h2 class="subtitle" data-aos="fade-up">Join Us!</h2>
-          <ul class="contact--list">
-            <li class="contact--item" data-aos="fade-up">
-              <img class="contact--img" src="img/qr-twitter.svg" alt="twitter">
-              <a class="contact--link _twitter" href="https://twitter.com/tinft_solana" target="_blank">
-                @tinft_solana
-              </a>
-            </li>
-            <li class="contact--item" data-aos="fade-up">
-              <img class="contact--img" src="img/qr-discord.svg" alt="discord">
-              <a class="contact--link _discord" href="https://discord.com/invite/tinft" target="_blank">
-                https://discord.com/invite/tinft
-              </a>
-            </li>
-            <li class="contact--item" data-aos="fade-up">
-              <img class="contact--img" src="img/qr-google.png" alt="google play">
-              <span class="contact--link _google-play">Comming soon!</span>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-    </main>
-    <footer class="footer">
-      <div class="container-lg">
-        <p class="footer--text">Copyright © 2023 tiNFT. All rights reserved.</p>
+            </div>
+          </li>
+        </ul>
       </div>
-    </footer>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-  </body>
+    </section>
+    <section class="contact section" id="contact">
+      <div class="container-lg">
+        <h2 class="subtitle" data-aos="fade-up">Join Us!</h2>
+        <ul class="contact--list">
+          <li class="contact--item" data-aos="fade-up">
+            <img class="contact--img" src="img/qr-twitter.svg" alt="twitter">
+            <a class="contact--link _twitter" href="https://twitter.com/tinft_solana" target="_blank">
+              @tinft_solana
+            </a>
+          </li>
+          <li class="contact--item" data-aos="fade-up">
+            <img class="contact--img" src="img/qr-discord.svg" alt="discord">
+            <a class="contact--link _discord" href="https://discord.com/invite/tinft" target="_blank">
+              https://discord.com/invite/tinft
+            </a>
+          </li>
+          <li class="contact--item" data-aos="fade-up">
+            <img class="contact--img" src="img/qr-google.png" alt="google play">
+            <span class="contact--link _google-play">Coming soon!</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="container-lg">
+      <p class="footer--text">Copyright © 2023 tiNFT. All rights reserved.</p>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

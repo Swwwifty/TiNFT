@@ -10651,10 +10651,32 @@ img {
       max-width: unset; } }
 
 .features {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background: -webkit-gradient(linear, left top, right top, from(#ff7654), color-stop(50%, #fe5366), to(#fc2d79));
-  -webkit-clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 80px), 0 100%);
-  clip-path: polygon(0 50px, 100% 0, 100% calc(100% - 80px), 0 100%);
   color: #ffffff; }
+  .features::before, .features::after {
+    background: inherit;
+    content: "";
+    display: block;
+    height: 50px;
+    left: 0;
+    position: absolute;
+    right: 0; }
+  .features::before {
+    bottom: calc(100% - 1px);
+    -webkit-clip-path: polygon(100% 100%, 100% 0, 0 100%);
+    clip-path: polygon(100% 100%, 100% 0, 0 100%); }
+  .features::after {
+    top: calc(100% - 1px);
+    -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 0 100%); }
+  @media screen and (max-width: 991px) {
+    .features::before, .features::after {
+      height: 30px; } }
+  .features--container {
+    position: relative; }
   .features--title {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -10700,15 +10722,57 @@ img {
       .features--item:not(:last-child) {
         margin-right: 0;
         margin-bottom: 24px; } }
+  .features--item-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0; }
+    .features--item-btn video {
+      position: absolute;
+      /* width: 100%; */
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 21px; }
+  @media screen and (min-width: 991.1px) {
+    .features--item-btn:hover .features--img {
+      -webkit-transform: scale(1.05);
+      transform: scale(1.05); } }
+  @media screen and (max-width: 991px) {
+    .features--item-btn {
+      position: relative; }
+      .features--item-btn::after {
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        width: 32px;
+        height: 32px;
+        background-image: url(../img/icon-logo.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: clickOnPhone 3s ease infinite;
+        animation: clickOnPhone 3s ease infinite;
+        content: ""; } }
   .features--img {
     display: inline-block;
-    margin-bottom: 16px;
-    max-width: 100%; }
+    max-width: 100%;
+    border-radius: 29px;
+    -webkit-transition: -webkit-transform 250ms;
+    transition: -webkit-transform 250ms;
+    transition: transform 250ms;
+    transition: transform 250ms, -webkit-transform 250ms;
+    -webkit-transition-timing-function: cubic-bezier(0.75, 0, 0.23, 1.08);
+    transition-timing-function: cubic-bezier(0.75, 0, 0.23, 1.08); }
   @media screen and (max-width: 991px) {
     .features--img {
       width: 200px; } }
   .features--item-title {
     margin-bottom: 6px;
+    margin-top: 16px;
     font-size: 24px;
     font-weight: 600;
     text-transform: uppercase; }
@@ -10716,13 +10780,43 @@ img {
     font-size: 18px;
     line-height: 1.2; }
 
-@media screen and (max-width: 991px) {
-  .features {
-    -webkit-clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%);
-    clip-path: polygon(0 30px, 100% 0, 100% calc(100% - 30px), 0 100%); } }
+.features-modal {
+  color: #403f4c; }
+  .features-modal--btn {
+    position: absolute;
+    top: 16px;
+    right: 16px; }
+  .features-modal--title {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 600; }
+  .features-modal--text {
+    text-align: left; }
+
+@-webkit-keyframes clickOnPhone {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  50% {
+    -webkit-transform: rotate(-45deg) translate(0, -40px) scale(0.7);
+    transform: rotate(-45deg) translate(0, -40px) scale(0.7); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
+
+@keyframes clickOnPhone {
+  0% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  50% {
+    -webkit-transform: rotate(-45deg) translate(0, -40px) scale(0.7);
+    transform: rotate(-45deg) translate(0, -40px) scale(0.7); }
+  100% {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); } }
 
 .rewards {
-  margin-top: -150px;
+  margin-top: -125px;
   background: url(../img/rewards-bg.png);
   -webkit-animation: scroll 70s linear infinite;
   animation: scroll 70s linear infinite;
